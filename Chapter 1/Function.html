@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 파라미터(인수) a : 함수에 전달되는 값 
+        function myFunction(a){
+            const result=a+2;
+            return result;
+        }
+
+        // 여러개의 파라미터를 받는 함수
+        function calcSum(a,b,c){
+            const result=a+b+c;
+            return result;
+        }
+
+        function myFunction2(){
+            console.log('안녕하세요'); // 안녕하세요 나오고
+            return 100; // 100도 리턴된다
+        }
+
+        /*
+            function myFunction(){
+                return 100;
+
+                //실행되지 않음
+                    console.log('안녕하세요');
+            }
+        */
+
+        function myFunction3(a,b){
+            // a가 100이상이라면 a를 반환
+            if(a>=100){
+                return a;
+            }
+
+            // a가 100 미만이라면 b를 반환
+            return b;
+        }
+
+        // 전달할 파라미터가 없으면 () 안에는 아무것도 입력하지 않는다.
+        function myFunction4(){
+            console.log('안녕하세요');
+        }
+        myFunction4(); // 결과 : 안녕하세요 
+    </script>
+</body>
+</html>
