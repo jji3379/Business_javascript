@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 한꺼번에 상수 선언하기
+        const a=1;
+              b=2;
+        
+        console.log(a+b);
+
+        // 상수는 기본적으로 값을 변경할 수 없지만,
+        // 상수로 선언된 배열과 객체 내부의 값은 변경할 수 있다. 
+        const myArray=['펭귄','고래','참치'];
+        myArray[0]='새우'; // myArray[0] 변경, 에러는 발생하지 않음
+        
+        const myObject={id:20, name:'펭귄'};
+        myObject.name='오리'; //myObject.name 변경, 에러는 발생하지 않음
+
+        // let 보다는 const를 적극 이용하자
+        // let 은 값 변경이 필요한 데이터
+        // 이 외에는 const 를 사용하여 가독성을 높인다
+    </script>
+</body>
+</html>
