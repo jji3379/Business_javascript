@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            default : 만족하는 조건이 없는 경우의 처리
+        */
+        const myfruit='사과';
+
+        switch(myfruit){
+            case '사과' : 
+                alert('사과입니다');
+                break;
+            case '귤' :
+                alert('귤입니다.');
+                break;
+            default :
+                alert('기타 과일입니다.');
+                break;
+        }
+
+        const myValue='100';
+
+        // switch 식은 값과 타입의 비교가 모두 이루어진다 ===
+
+        switch(myValue){
+            case 100 :
+                // 숫자 타입의 경우 실행
+                console.log('숫자 타입의 100입니다.');
+                break;
+            default :
+                console.log('숫자 타입의 100이 아닙니다'); // 이걸로 출력됨
+                break;     
+        }
+    </script>
+</body>
+</html>
