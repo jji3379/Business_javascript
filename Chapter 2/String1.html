@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 문자열 길이 확인 : .length
+        '웹디자인'.length; // 4
+
+        // 문자열 공백 처리 : .trim()
+        /*
+            양단에 공백이 있을 때
+            줄바꿈 문자가 삽입되어 있는 경우
+            문자열 사이의 공백은제거되지 않음
+        */
+
+        // 문자열 검색
+        /*
+            indexOf() : 문자열 시작 인데스
+            lastIndexOf() : 문자열 종료 인덱스
+            search() : 정규 표현 일치 인덱스
+        */
+        const myString ='JavaScript를 배우자';
+
+        // 지정 문자열이 존재할 때
+        const a1=myString.indexOf('JavaScript');
+        console.log(a1); // 결과 : 0
+
+        const a2=myString.indexOf('배우자');
+        console.log(a2); // 결과 : 12
+
+        const a3=myString.indexOf('a');
+        console.log(a3); // 결과 : 3
+
+        // 지정 문자열이 존재하지 않을 때
+        const b1=myString.indexOf('HTML');
+        console.log(b1); // 결과 : -1
+
+        const b2=myString.indexOf('j');
+        console.log(b2); // 결과 : -1 (대소문자를 구별)
+
+        // 부분 검색
+        /*
+            includes() : 문자열 포함 여부 확인
+            startsWith() : 문자열 시작 문자 확인
+            endsWith() : 문자열 종료 문자 확인 
+        */
+        const c1=myString.includes('JavaScript');
+        console.log(c1); // 결과 : true
+
+        const c2=myString.startsWith('배우자');
+        console.log(c2); // 결과 : false
+
+        const c3=myString.endsWith('배우자');
+        console.log(c3); // 결과 : true
+
+        // 문자열 추출 : .charAt()
+        'JavaScript'.charAt(3); // a
+        'JavaScript'.charAt();  // J 인수 생략시 기본 인덱스 값 0 
+
+        // 문자열 변환 : .replace()
+        const imageName='image1.png';
+        imageName.replace('1.png','2.png'); // image2.png
+
+        // 위치 지정하여 선택 : .slice(), .substring()
+        'JavaScript'.slice(0,4); // Java
+        'JavaScript'.slice(0); // JavaScript (두 번째 인수를 생략하면 문자열의 마지막까지 추출)
+        'JavaScript'.substring(0,4); // Java
+        'JavaScript'.substring(0); // JavaScript (두 번째 인수를 생략하면 문자열의 마지막까지 추출)
+
+        // 글자 수 지정하여 선택하기 : .substr(시작인덱스, 글자수)
+        'JavaScript'.substr(4,6); // Script
+
+        // 문자열 나누기 : .split
+        const myUrl='http://example.com/?id=123456&name=Lion&age=28';
+        myUrl.split('&'); // ["http://example.com/?id=123456", "name=Lion", "age=28"]
+        myUrl.split(/&|\?/); // ["http://example.com/", "id=123456", "name=Lion", "age=28"]
+
+        'JavaScript'.split(''); // ["j", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+        'JavaScript'.split(); // ["JavaScript"]
+
+    </script>
+</body>
+</html>
