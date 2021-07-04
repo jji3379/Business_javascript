@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 문자열 합치기 : +
+        const country='대한민국';
+        const states='서울';
+        console.log(country+states);
+        console.log(`${country}${states}`);
+        
+        // 문자열의 대소문자 변환하기 : toLowerCase(), toUpperCase()
+        'TEST'.toLowerCase();
+        'john smith'.toUpperCase();
+
+        // 문자열 길이 맞추기 : padStart(), padEnd() => 10 미만의 숫자 앞에 0을 붙여 두 자리 형식을 만들고 싶을 때
+        '5'.padStart(2,'0');    // 05
+        'ff'.padEnd(6,'0');     // ff0000
+
+        // 지정한 길이가 실제 문자열보다 잛은 경우 문자열 반환은 이루어지지 않는다.
+        '123'.padStart(3,'0');  // 123
+        'ff'.padStart(6);       // '    ff' 앞부분에 4개의 공백이 삽입됨
+
+        // 문자열 URI 이스케이프 처리하기 : encodeURI => URI의 한글을 인코딩할 때
+        encodeURI('http://example.com/귀여운 고양이 페이지.html');
+        encodeURIComponent('http://example.com/귀여운 고양이 페이지.html');
+        // encodeURIComponent는 encodeURI 보다 이스케이프 처리를 실행하는 문자의 종류가 더 많다.
+        // encodeURI 가 이스케이프 처리하지 않는 문자 : / ? & + : @ $ ; , #
+
+        // 문자열 URI 디크도 하기 : decodeURI => 인코딩된 URI 문자열을 디코딩하고 싶을 때
+        decodeURI();
+        decodeURIComponent();
+    </script>
+</body>
+</html>
