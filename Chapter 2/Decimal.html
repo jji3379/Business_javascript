@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 소수점 자릿수 지정하기
+
+        // toFixed
+        (0.33333).toFixed(2);     // 0.33
+        
+        (123.5678).toFixed(1);    // 123.6 (근사치로 변환)
+
+        (2.4).toFixed(4);         // 2.40000 (소수점이 네 자리가 되도록 0이 채워짐)
+
+        // toPrecision
+        (0.33333).toPrecision(2); // 0.33 (정밀도 2)
+
+        (123.456).toPrecision(3); // 123 (정밀도3)
+
+        (4.56).toPrecision(2);    // 4.6 (근사치로 변환)
+
+        (10).toPrecision(4);      // 10.00 (정밀도가 4가 되도록 0으로 채움)
+    </script>
+</body>
+</html>
