@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>'JavaScript를 배우자'의 인덱스</h1>
+    <table>
+        <tr>
+            <th>includes('JavaScript')</th>
+            <td class="result1"></td>
+        </tr>
+        <tr>
+            <th>includes('배우자')</th>
+            <td class="result2"></td>
+        </tr>
+        <tr>
+            <th>includes('HTML')</th>
+            <td class="result3"></td>
+        </tr>
+    </table>
+    <script>
+        const targetString='JavaScript를 배우자';
+        document.querySelector('.result1').innerHTML=targetString.includes('JavaScript');
+        document.querySelector('.result2').innerHTML=targetString.includes('배우자');
+        document.querySelector('.result3').innerHTML=targetString.includes('HTML');
+    </script>
+</body>
+</html>
