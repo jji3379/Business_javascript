@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="tel" id="phoneNumberText" placeholder="전화번호">
+    <p class="caption">
+        <small>실제로 데이터는 전송되지 않음</small>
+    </p>
+    <button id="submitButton" type="submit">데이터 전송</button>
+    <script>
+        // #submitButton 클릭 시의 처리 작업 설정
+        document.querySelector('#submitButton').addEventListener('click',(event)=>{
+            // 전화번호 가져오기
+            const phoneNumber=document.querySelector('#phoneNumberText').value;
+
+            // 전화번호에 하이픈(-)이 삽입된 경우 ''(공백)으로 변환
+            const trimmedPhoneNumber=phoneNumber.replace(/-/g,'');
+            // 09012345678
+            alert(`전화번호는 ${trimmedPhoneNumber}입니다.`);
+
+            // 버튼의 기본 작동을 해제
+            event.preventDefault();
+        })
+    </script>
+</body>
+</html>
