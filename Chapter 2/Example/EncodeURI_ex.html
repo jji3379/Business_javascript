@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>트윗하고 싶은 내용을 입력해 주세요.</h1>
+    <textarea id="tweetTextArea"></textarea>
+    <button id="tweetButton"></button>
+    <script>
+        document.querySelector('#tweetButton').addEventListener('click',()=>{
+            // 트윗 내용 가져오기
+            let tweetText=document.querySelector('#tweetTextArea').value;
+
+            // #JavaScript 와 빈칸을 트윗 내용에 추가하기
+            tweetText+=' #JavaScript';
+
+            // 인코딩하기
+            const encodedText=encodeURIComponent(tweetText);
+
+            // 링크 작성하기
+            const tweetURL=`https://twitter.com/intent/tweet?text=${encodedText}`;
+
+            // 링크 열기
+            window.open(tweetURL);
+        })
+    </script>
+</body>
+</html>
