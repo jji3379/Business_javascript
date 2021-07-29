@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // concat : 여러 개의 배열을 하나로 결합 
+        const array1=['곰', '사자'];
+        const array2=['여우'];
+        const array3=array1.concat(array2);
+        console.log(array3); // 결과 ['곰', '사자', '여우']
+
+        // Spead 연산자 (...) 를 사용해 [...배열]의 형태로 배열을 선언하면 요소의 데이터가 전부 표시
+        const array4=['곰', '사자'];
+        console.log([...array4]); // 결과 : ['곰', '사자']
+
+        const array5=['곰', '사자'];
+        const array6=['여우'];
+        const array7=[...array5, ...array6];
+        console.log(array7); // 결과 : ['곰', '사자', '여우']
+    </script>
+</body>
+</html>
