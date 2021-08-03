@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 비교 함수 없이 정렬 => 대소문자 구분 
+        const arr1=['grape','Orange','apple'];
+        arr1.sort();
+        console.log(arr1); // 결과 : ['Orange', 'apple', 'grape']
+
+        // 비교 함수에 localCompare를 사용 => 대소문자 구분 X
+        const arr2=['grape','Orange','apple'];
+        arr2.sort((a, b)=>a.localeCompare(b));
+        console.log(arr2); // 결과 : ['apple', 'grape', 'Orange']
+    </script>
+</body>
+</html>
