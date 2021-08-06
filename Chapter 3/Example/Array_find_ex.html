@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="search-word-wrapper">
+        <label>유저ID <input id="search-id-input" type="text"></label>
+    </div>
+    <p id="search-result">
+        유저 검색 결과 없음
+    </p>
+    <script>
+        // id 키와 name 키를 가지는 유저 데이터 배열
+        const userDataList=[
+            {id: 123, name:'곰'},
+            {id: 1021, name:'사자'},
+            {id: 6021, name:'여우'}
+        ];
+
+        /** 검색 ID 입력창 */
+        const searchIdInput=document.querySelector('#search-id-input');
+
+        /** 검색 결과 표시창 */
+        const searchResult=document.querySelector('#search-result');
+
+        // 문자가 입력될 때마다 내용 체크
+        searchIdInput.addEventListener('keyup',()=>{
+            // 검색 ID 가져오기
+            const searchId=Number(event.target.value);
+            findUser(searchId);
+        });
+
+        /*** 유저 검색 */
+        function findUser(searchId){
+            // 해당 데이터 가져오기
+            const targetData=userDataList.find((data)=>data.id===searchId);
+
+            // 해당 데이터가 없으면 '유저 검색 결과 없음' 표시 후 종료
+            if(targetData==null){
+                searchResult.textContent='유저 검색 결과 없음';
+                return;
+            }
+
+            // 검색 결과의 이름을 표시
+            searchResult.textContent=targetData.name;
+        }
+    </script>
+</body>
+</html>
