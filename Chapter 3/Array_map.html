@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // map(콜백함수)은 배열에서 요소를 추출하여 새로운 배열을 생성한다. => 콜백 함수로 새로운 배열 생성 
+        const idList1=[4, 10, 20];
+
+        const userIdList1=idList1.map((value)=>`userid_${value}`);
+        console.log(userIdList1); // 결과 : ["userid_4", "userid_10", "userid_20"]
+
+        // 콜백 함수는 요소 데이터 이외에도 인덱스와 기존 배열을 인수로 받을 수 있다.
+        const idList2=[3, 8, 12];
+
+        const userIdList2=idList2.map((value, index)=>`userid_${index+1}_${value}`);
+        console.log(userIdList2); // 결과 : ["userid_1_3", "userid_2_8", "userid_3_12"]
+
+        const apiResponseData=[
+            {id:10, name:'곰'},
+            {id:21, name:'사자'},
+            {id:31, name:'여우'}
+        ];
+
+        const idList3=apiResponseData.map((value)=>value.id);
+        // 다음과 같이 작성도 가능
+        /*
+            const idList=apiResponseData.map(value=>{
+                return value.id
+            });
+        */
+        console.log(idList3); // 결과 : [10, 21, 31]
+    </script>
+</body>
+</html>
