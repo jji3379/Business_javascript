@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="on"></div>
+    <div></div>
+    <script>
+        // spread [... 변환대상]
+
+        // div 요소를 전부 불러오기 => 반환값은 NodeListOf : 유사 배열
+        const allDivElementList=document.querySelectorAll('div');
+
+        // div 요소의 수를 출력
+        console.log(allDivElementList.length);
+
+        // 세 번째 div 요소 출력 (인덱스가 부여된 요소)
+        console.log(allDivElementList[2]);
+
+        // 유사 배열은 배열이 아니기 때문에 filter 같은 메소드 못씀
+
+        // spread 연산자로 유사 배열을 배열로 변환한다
+        const elementsArray=[...allDivElementList];
+
+        // 배열용 메소드인 filter() 사용 가능
+        elementsArray.filter((element)=>element.classList.contains('on'));
+
+        // 문자열 length 와 인덱스로 접근이 가능하기 때문에 유사 배열이다
+        const myString='안녕하세요';
+        console.log([...myString]); // 결과 : ["안", "녕", "하", "세", "요"]
+    </script>
+</body>
+</html>
