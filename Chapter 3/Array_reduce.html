@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3개의 값을 가지는 배열
+        const priceList=[100, 500, 900];
+
+        // 합계를 저장하는 변수
+        const sum=priceList.reduce((previous, current)=>{
+            return previous+current;
+        });
+
+        // 다음과 같이 생략 가능
+        // priceList.reduce((previous, current)=>previous+current);
+
+        console.log(sum); // 결과 : 1500
+
+        // ***** 2차 배열을 1차 배열로 만드는 플래트닝(Flattening) 에도 사용할 수 있다.
+        const array=[['바나나', '사과', '딸기'], ['귤', '포도']];
+
+        const flattenedArray=array.reduce((previousValue, currentValue)=>{
+            return previousValue.concat(currentValue);
+        });
+        console.log(flattenedArray); // 결과 : ['바나나', '사과', '딸기', '귤', '포도']
+
+        // reduceRight 우 -> 좌로 작업
+        const array2=['사자', '여우', '호랑이'];
+
+        const members1=array2.reduce((previous, current)=>{
+            return `${previous}와 ${current}`;
+        });
+        console.log(members1); // 결과 : "사자와 여우와 호랑이"
+
+        const members2=array2.reduceRight((previous, current)=>{
+            return `${previous}와 ${current}`;
+        });
+        console.log(members2); // 결과 : "호랑이와 여우와 사자"
+    </script>
+</body>
+</html>
