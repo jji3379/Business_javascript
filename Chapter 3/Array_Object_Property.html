@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 개인의 정보 데이터 객체
+        const userData={
+            id: 1,
+            name : '사자',
+            age : 26
+        };
+
+        console.log(userData.hasOwnProperty('id')); // 결과 : true
+        console.log(userData.hasOwnProperty('address')); // 결과 : false
+        // 키 in 객체 : 데이터의 유무 여부 반환
+        console.log('id' in userData); // 결과 : true
+
+        // undefined, null 여부 확인
+        console.log(userData.id !=null); // 결과 : true
+        console.log(userData.address !=null); // 결과 : false 
+        console.log(userData['id'] != null); // 결과 : true
+    </script>
+</body>
+</html>
