@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 개인의 정보 데이터 객체
+        const userData={
+            id: 1,
+            name : '사자',
+            age : 26
+        };
+
+        // 키를 기준으로 루프 처리
+        console.log(Object.keys(userData)); // 결과 : ['id', 'name', 'age']
+
+        // 데이터를 기준으로 루프 처리
+        console.log(Object.values(userData)); // 결과 : [1, '사자', 26]
+
+        // 속성을 기준으로 루프 처리
+        console.log(Object.entries(userData));
+        // 결과 : [['id,1'],['name', '사자'], ['age', 26]]
+    </script>
+</body>
+</html>
