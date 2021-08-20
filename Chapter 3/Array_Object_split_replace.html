@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const userData1={
+            id: 1,
+            name : '사자',
+            age : 26
+        };
+
+        const {id, name, age} =userData1;
+
+        console.log(id); // 결과 : 1(userData.id 값)
+        console.log(name); // 결과 : 사자(userData.name 값)
+        console.log(age); // 결과 : 26(userData.age 값)
+
+        const userData2={
+            id: 1,
+            name : '사자',
+            age : 26
+        };
+
+        const {age, id, address} =userData2;
+
+        console.log(age); // 결과 : 26(userData.age 값)
+        console.log(id); // 결과 : 1(userData.id 값)
+        console.log(address); // 결과 : undefined (userData.address 는 존재하지 않음)
+        
+        // 별도의 이름 지정
+        const userData2={
+            id :1,
+            name : '사자'
+        };
+
+        // name 키의 값을 myName에 대입
+        const {name:myName}=userData2;
+        console.log(myName); // 결과 : '사자'(userData.name 값)
+    </script>
+</body>
+</html>
