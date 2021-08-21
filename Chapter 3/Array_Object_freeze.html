@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const object1={id:10, name:'사자'};
+        object1.id=12;
+        object1.address='서울'; // 속성 추가 가능
+
+        // 속성의 추가, 삭제, 변경의 제한은 Object.freeze() 를 사용한다
+        // 오류 검사 설정은 'use strict를 사용한다'
+
+        'use strict';
+
+        const object2={id : 10, name:'사자'};
+        Object.freeze(object2);
+
+        object2.id=12; // 속성을 변경할 수 없으므로 에러
+        object2.address='서울'; //속성을 추가할 수 없으므로 에러
+
+        'use strict';
+
+        const array1=[1,2,3];
+        Object.freeze(array1);
+        array1.push(4); // 속성을 변경할 수 없으므로 에러
+
+        // 객체의 수정 제한 확인은 Object.isFrozen()을 사용한다
+        'use strict';
+
+        Object.freeze(object2);
+
+        console.log(Object.isFrozen(object2));
+
+    </script>
+</body>
+</html>
