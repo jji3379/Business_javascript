@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(typeof true); // 결과 : 'boolean'
+
+        console.log(typeof 10); // 결과 : 'number'
+        
+        console.log(typeof '사자'); // 결과 : 'string'
+        
+        console.log(typeof null); // 결과 : 'object'
+        
+        console.log(typeof undefined); // 결과 : 'undefined'
+        
+        console.log(typeof Symbol()); // 결과 : 'symbol'
+        
+        console.log(typeof [1, 2, 3]); // 결과 : 'object'
+
+        console.log(typeof {id : 10, name :'호랑이'}); // 결과 : 'object'
+        
+        console.log(
+            typeof function() {
+                console.log('test');
+            }
+        ); // 결과 : 'function'
+        
+        console.log(typeof class MyClass {}); // 결과 : 'function'
+    </script>
+</body>
+</html>
