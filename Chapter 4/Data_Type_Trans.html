@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const result=100+Number('200');
+        console.log(result); // 결과 : 300
+
+        Boolean(1); // true
+        Boolean(0); // false
+        Boolean('사자'); // true
+        Boolean(''); // false
+
+        String(1); // "1"
+
+        Number('1'); // 1
+        Number(''); // 0
+        Number('사자'); // NaN
+        Number(true); // 1
+        Number(false); // 0
+
+        // 암시형 변환 (데이터 타입이 자동으로 변환되는 것)
+        console.log(100+'200'); // 결과 : '100200' (숫자 100이 문자열 타입으로 변환됨)
+        console.log('200'-100); // 결과 : 100 (문자열 '200'이 숫자 타입으로 변환됨)
+        console.log(1=='1'); // 결과 : true (숫자 1이 문자열 타입으로 변환됨)
+
+        // 비교시 == 말고 ===로 데이터와 타입 모두 비교하기
+
+        // 변수의 동적 타입 변환
+        let a=10; // a는 숫자 타입
+        a='사자'; // a가 문자열 타입으로 변환됨
+    </script>
+</body>
+</html>
