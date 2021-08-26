@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 원시 타입 : 값의 전달
+        // 객체 타입 : 참조의 전달
+
+        let a=100;
+        let b=a;
+        a=500;
+        console.log(b); // 결과 :100
+
+        let c=[1, 2, 3];
+        let d=c; 
+        c[0]=100;
+        console.log(d); // 결과 : [100, 2, 3]
+
+        // 전달받은 파라미터에 2를 더하는 함수
+        function myFunction(x) {
+            x=x+2;
+        }
+
+        // 변수에 e에 10 대입
+        let e=10;
+
+        // myFunction() 에 e를 전달
+        // 복사된 데이터 10을 함수에 전달
+        myFunction(e);
+
+        // 10이 출력 (2가 더해진 12가 아님을 확인)
+        console.log(e); // 결과 : 10
+
+        // 전달받은 배열의 첫 번째 요소에 100을 대입하는 함수
+        function myFunction2(x) {
+            x[0]=100;
+        }
+
+        // 변수 f에 [1, 2, 3]을 대입
+        let f=[1, 2, 3];
+
+        // myFunction() 에 f 를 전달
+        // 배열 데이터 [1, 2, 3] 메모리의 위치를 함수로 전달
+        myFunction2(f);
+
+        // [100, 2, 3] 출력 ([1, 2, 3]이 아님을 확인)
+        console.log(f); // 결과 : [100, 2, 3]
+    </script>
+</body>
+</html>
