@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            변수에 데이터를 대입하지 않는다
+            객체의 속성에 값을 대입하지 않는다
+            파라미터에 값을 전달하지 않는다
+        */
+       let a;
+       console.log(a); // 결과 : undefined
+
+       const object={};
+       console.log(object.b); // 결과 : undefined
+
+       function myFunction(c){
+            console.log(`b의 값은 ${c}`);
+       }
+       myFunction(); // 'b의 값은 undefined'가 출력됨
+    </script>
+</body>
+</html>
