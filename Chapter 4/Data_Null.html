@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function searchUser(targetId) {
+            const userList = [
+                {id : 1, name : '사자'},
+                {id : 2, name : '곰'},
+                {id : 3, name : '여우'}
+            ];
+
+            // 해당 유저 검색
+            const targetUser = userList.find((user) => user.id === targetId);
+            
+            // 데이터가 undefined 인 경우 작업 추가
+            if(targetUser === undefined) {
+                return null;
+            }
+            
+            return targetUser.name;
+        }
+
+        searchUser(1); // 1을 전달하면 사자를 반환
+        searchUser(4); // 4를 전달하면 null 반환
+    </script>
+</body>
+</html>
